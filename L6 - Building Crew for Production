@@ -1,0 +1,43 @@
+# Initial Imports
+# Warning control
+import warnings
+warnings.filterwarnings('ignore')
+
+# Load environment variables
+from helper import load_env
+load_env()
+#
+
+#
+# Create a new project
+! crewai create crew new_project --provider openai
+#
+
+#
+# Setting up the environment
+! cd new_project && crewai install
+#
+
+# 
+# Setting up environment variables
+! cat new_project/.env
+#
+
+#
+# Running the crew
+! cd new_project && crewai run
+#
+
+#
+# Flows CLI 
+! crewai create flow new_flow
+#
+
+#
+! ls -1 new_flow
+#
+
+#
+! ls -1 new_flow/src/new_flow/
+#
+
